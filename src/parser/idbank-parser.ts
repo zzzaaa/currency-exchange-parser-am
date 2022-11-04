@@ -21,7 +21,7 @@ export function idbankParser(body: string): Map<Currency, Rates> {
         if (!isCurrency(currency) || isNaN(sell) || isNaN(buy)) {
             continue;
         }
-        result.set(currency, { buy, sell });
+        result.set(currency, {  forCurrency: Currency.AMD, buy, sell });
 
     }
     return result;

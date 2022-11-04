@@ -10,7 +10,7 @@ export function sasParser(body: string): Map<Currency, Rates> {
         if (isCurrency(currency)) {
             const buy = parseFloat(match[2]);
             const sell = parseFloat(match[3]);
-            result.set(currency, { buy, sell });
+            result.set(currency, { forCurrency: Currency.AMD, buy, sell });
         }
     }
     return result;
